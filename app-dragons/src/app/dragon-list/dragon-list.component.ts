@@ -17,8 +17,6 @@ export class DragonListComponent implements OnInit {
     
   }
 
-  getDragon() { 
-     return this.aS.getAlbumsFirebase()
-  } 
+ getDragon() {return this.aS.getAlbumsFirebase()}
 
 }
