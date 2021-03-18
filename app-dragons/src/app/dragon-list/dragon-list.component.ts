@@ -17,9 +17,7 @@ dragon:DragonModel[];
 
   ngOnInit(): void {
     this.aS.getDragon().subscribe(data => {
-      console.log(data)
+      this.dragon = data;
     })
   }
-
-
 }

@@ -1,3 +1,4 @@
-export class DragonModel {
+export interface DragonModel {
+    id:string;
     name:string;
 }

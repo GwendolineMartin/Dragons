@@ -14,22 +14,9 @@ export class ServiceService {
 
   dragonsList = 'https://dragons-397cf-default-rtdb.firebaseio.com/Dragons';
 
-  constructor(private firestore: AngularFirestore) { }
+  constructor(private http: HttpClient) { }
 
-    getDragon() {
-      return this.firestore.collection('Dragons').snapshotChanges(); 
-    }
-
-    createDragon(dragon: DragonModel){
-        return this.firestore.collection('Dragons').add(dragon);
-    }
-
-    updateDragon(dragon: DragonModel){
-      delete dragon.name;
-      this.firestore.doc('Dragons/' + dragon.name).update(dragon);
-    }
-
-    deleteDragon(dragonName: string){
-      this.firestore.doc('Dragons/' + dragonName).delete();
+    getDragon():Observable<DragonModel[]> {
+      return this.http.get<DragonModel[]>(this.dragonsList + '/.json')
     }
 }
