@@ -1,0 +1,32 @@
+<div class="container">
+    <form 
+    [formGroup]="dragonForm"
+    (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">Name :</label>
+            <input name="name" formControlName="name" type="text" class="form-control" id="name" aria-describedby="emailHelp"
+                placeholder="Enter Dragon name">
+                <div *ngIf="name?.invalid && name?.touched" class="alert alert-danger">
+                    <div *ngIf="name?.errors?.required">
+                        Name is required
+                    </div>
+                    <div *ngIf="name?.errors?.minlength">
+                        Name must be at least 5 characters long.
+                    </div>
+                </div>
+                <label for="knight">knight :</label>
+                <input name="knight" formControlName="knight" type="text" class="form-control" id="knight" aria-describedby="emailHelp"
+                    placeholder="Enter knight name">
+                    <div *ngIf="knight?.invalid && knight?.touched" class="alert alert-danger">
+                        <div *ngIf="knight?.errors?.required">
+                            knight is required
+                        </div>
+                        <div *ngIf="name?.errors?.minlength">
+                            knight must be at least 5 characters long.
+                        </div>
+                    </div>          
+        </div>
+        <button [disabled]="dragonForm.invalid" type="submit" class="btn btn-dark btn-block">Add</button>
+
+    </form>
+</div>

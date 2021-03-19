@@ -8,19 +8,24 @@ import { DragonListComponent } from './dragon-list/dragon-list.component';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule } from '@angular/fire/database';
 import { environment } from '../environments/environment';
+import { AddDragonComponent } from './add-dragon/add-dragon.component';
+import { FormBuilder, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { EditDragonComponent } from './edit-dragon/edit-dragon.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DragonListComponent,
+    AddDragonComponent,
+    EditDragonComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFireDatabaseModule
+    FormsModule,
+    ReactiveFormsModule,
 
   ],
   providers: [],
