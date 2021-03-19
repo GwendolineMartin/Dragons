@@ -23,9 +23,7 @@ export class AddDragonComponent implements OnInit {
         knight: new FormControl("", [
           Validators.minLength(5)  // au min de longueur 5 caractères
         ]),
-        symbole: new FormControl("", [
-
-        ]),
+        symbole: ""
        
     
       })

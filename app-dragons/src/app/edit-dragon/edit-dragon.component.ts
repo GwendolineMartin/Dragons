@@ -41,9 +41,7 @@ export class EditDragonComponent implements OnInit {
           Validators.required, // pour définir dans le controle un champ requis
           Validators.minLength(5)  // au min de longueur 5 caractères
         ]),
-        symbole: new FormControl("", [
-
-        ]),
+        symbole: "",
         id:'',
       })
 
