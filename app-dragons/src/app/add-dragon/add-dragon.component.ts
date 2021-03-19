@@ -23,12 +23,16 @@ export class AddDragonComponent implements OnInit {
         knight: new FormControl("", [
           Validators.minLength(5)  // au min de longueur 5 caractères
         ]),
+        symbole: new FormControl("", [
+
+        ]),
        
     
       })
   }
   get name() { return this.dragonForm.get('name'); }
   get knight() { return this.dragonForm.get('knight'); }
+  get symbole() { return this.dragonForm.get('symbole'); }
 
 
   onSubmit() {

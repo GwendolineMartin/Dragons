@@ -41,12 +41,17 @@ export class EditDragonComponent implements OnInit {
           Validators.required, // pour définir dans le controle un champ requis
           Validators.minLength(5)  // au min de longueur 5 caractères
         ]),
+        symbole: new FormControl("", [
+
+        ]),
         id:'',
       })
 
   }
   get name() { return this.dragonForm.get('name'); }
   get knight() { return this.dragonForm.get('knight'); }
+  get symbole() { return this.dragonForm.get('symbole'); }
+
   onSubmit() {
     const dragon = this.dragonForm.value;
     this.aS.updateDragon(dragon).subscribe((ref)=> this.router.navigate(['/home']));

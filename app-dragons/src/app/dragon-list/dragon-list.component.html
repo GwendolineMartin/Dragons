@@ -5,6 +5,7 @@
       <tr>
           <th scope="col">Name</th>
           <th scope="col">knightName</th>
+          <th scope="col">Symbole</th>
           <th scope="col">Update</th>
         <th scope="col">Delete</th>
       </tr>
@@ -13,6 +14,7 @@
       <tr *ngFor="let item of dragon">
           <td style="color: thistle;">{{item.name}}</td>
           <td style="color: thistle;">{{item.knight}}</td>
+          <td style="color: thistle;">{{item.symbole}}</td>
           <td> <button routerLink="/dragon/edit/{{item.id}}" class="btn btn-outline-info">Edit</button></td>
         <td> <button class="btn btn-outline-danger" (click)="onDelete(item.id)" >Delete</button></td>
       </tr>

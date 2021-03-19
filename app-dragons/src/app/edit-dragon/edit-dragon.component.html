@@ -29,6 +29,24 @@
                 </div>
           
         </div>
+        <div class="form-check" style="color: white;">
+            <input class="form-check-input" type="radio" name="symbole" formControlName="symbole" id="Fire" value="Fire">
+            <label class="form-check-label" for="Fire">
+              Fire
+            </label>
+          </div>
+          <div class="form-check" style="color: white;">
+            <input class="form-check-input" type="radio" name="symbole" formControlName="symbole" id="Water" value="Water">
+            <label class="form-check-label" for="Water">
+              Water
+            </label>
+          </div>
+          <div class="form-check disabled mb-4" style="color: white;">
+            <input class="form-check-input" type="radio" name="symbole" formControlName="symbole" id="Sequins" value="Sequins">
+            <label class="form-check-label" for="Sequins">
+              Sequins
+            </label>
+          </div>
         <button [disabled]="dragonForm.invalid" type="submit" class="btn btn-dark btn-block">Edit</button>
 
     </form>

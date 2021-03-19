@@ -2,8 +2,8 @@
     <form 
     [formGroup]="dragonForm"
     (ngSubmit)="onSubmit()">
-        <div class="form-group">
-            <label for="name">Name :</label>
+        <div class="form-group mt-4">
+            <label for="name"style="color: white;">Name :</label>
             <input name="name" formControlName="name" type="text" class="form-control" id="name" aria-describedby="emailHelp"
                 placeholder="Enter Dragon name">
                 <div *ngIf="name?.invalid && name?.touched" class="alert alert-danger">
@@ -14,7 +14,7 @@
                         Name must be at least 5 characters long.
                     </div>
                 </div>
-                <label for="knight">knight :</label>
+                <label style="color: white;" for="knight">knight :</label>
                 <input name="knight" formControlName="knight" type="text" class="form-control" id="knight" aria-describedby="emailHelp"
                     placeholder="Enter knight name">
                     <div *ngIf="knight?.invalid && knight?.touched" class="alert alert-danger">
@@ -26,6 +26,24 @@
                         </div>
                     </div>          
         </div>
+        <div class="form-check" style="color: white;">
+            <input class="form-check-input" type="radio" name="symbole" formControlName="symbole" id="Fire" value="Fire">
+            <label class="form-check-label" for="Fire">
+              Fire
+            </label>
+          </div>
+          <div class="form-check" style="color: white;">
+            <input class="form-check-input" type="radio" name="symbole" formControlName="symbole" id="Water" value="Water">
+            <label class="form-check-label" for="Water">
+              Water
+            </label>
+          </div>
+          <div class="form-check disabled mb-4" style="color: white;">
+            <input class="form-check-input" type="radio" name="symbole" formControlName="symbole" id="Sequins" value="Sequins">
+            <label class="form-check-label" for="Sequins">
+              Sequins
+            </label>
+          </div>
         <button [disabled]="dragonForm.invalid" type="submit" class="btn btn-dark btn-block">Add</button>
 
     </form>
